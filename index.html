@@ -1,79 +1,523 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Hybrid mobile app in minutes, not days</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="components/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="components/font-awesome/build/assets/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="components/highlightjs/styles/tomorrow.css"/>
+    <link rel="stylesheet" href="css/ruban.min.css"/>
+    <link rel="stylesheet" href="css/ruban-print.min.css" media="print"/>
+    <style>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Web5 : Presentation done in Bezier the 14th June 2013 for web-5 conf" />
+        #wrapper {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            clear: both;
+            margin: 20px auto 20px auto;
+            padding: 0 20px 20px 20px;
+            position: relative;
+        }
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        #logo {
+            float: left;
+            margin: 0;
+        }
 
-    <title>Web5</title>
-  </head>
+        .site-name {
+            display: block;
+            font-size: 33px; /* = 33px */
+            line-height: 1.0em;
+            padding-top: 20px;
+        }
 
-  <body>
+        .site-name a {
+            color: #333;
+            font-weight: 700;
+        }
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/corinnekrych/web5">View on GitHub</a>
+        .site-description {
+            color: #afafaf;
+            display: block;
+            font-size: 14px; /* = 14px */
+            margin: 10px 0;
+        }
 
-          <h1 id="project_title">Web5</h1>
-          <h2 id="project_tagline">Presentation done in Bezier the 14th June 2013 for web-5 conf</h2>
+        section {
+            border-left: 1em solid #434343;
+            border-right: 1em solid #434343;
+        }
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/corinnekrych/web5/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/corinnekrych/web5/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+        .pagination {
+            right: 2.6em;
+        }
+
+        pre code {
+            background-color: inherit;
+        }
+
+        pre .xml .javascript {
+            opacity: 1;
+        }
+
+        #examples ul {
+            padding-left: 0;
+        }
+
+        #getting-started-unleash-your-power {
+            color: white;
+            background-color: #0071B5;
+            border-color: white;
+        }
+
+        #getting-started-unleash-your-power strong {
+            text-shadow: 0.06em 0.06em 0 #0071B5, 0.07em 0.07em 0 #fff;
+        }
+    </style>
+</head>
+
+<body>
+<section id="intro">
+
+    <h2>Hybrid mobile app in minutes
+        not days</h2>
+
+    <div id="src" style="visibility:hidden">Corinne Krych - Fabrice Matrat</div>
+    <div id="target"></div>
+    <br/>
+
+    <div style="float: left; display: inline-block;">
+        <a href="http://conf2013.web-5.org/en/"><img style="align: right" src="images/copy-logo.png" width="179"
+                                                     height="201"
+                                                     alt="Web-5 Conference 2013"/></a>
+    </div>
+    <div style="float: left; display: inline-block;">
+        <br/><a href="http://conf2013.web-5.org/en/" title="Web-5 Conference 2013" rel="home">Web-5 Conference
+        2013</a>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+</section>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<section id="corinne" style="text-align: center;">
+    <p>Corinne Krych</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+    <p style=" font-size: 30px;  ">alias Athos</p>
+    <img width="20%" src="images/corinne_krych.png"/><br/>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+    <p style=" font-size: 30px;  ">@corinnekrych<br/>corinnekrych@gmail.com<br/>https://github.com/corinnekrych</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+    <div style="float:left;text-align:left;display:inline-block;width: 16%">
+        <img src="images/3musket33rs.jpeg" width="100%"/>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Web5 maintained by <a href="https://github.com/corinnekrych">corinnekrych</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 16%">
+        <img src="images/rivierargug.png" width="100%"/>
+    </div>
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 16%">
+        <img src="images/js-sophia-small.png" width="100%"/>
     </div>
 
-    
+    <div style="float: right; font-size: 25px; text-align: left; display: inline-block; width: 16%">
+        <img src="images/logo_duchess_all_in_one_small.png" width="100%"/>
+    </div>
+    <div style="float:right;text-align:right;display:inline-block;width: 16%">
+        <img src="images/aerogear.png" width="100%"/>
+    </div>
+    <div style="float:right;text-align:right;display:inline-block;width: 16%">
+        <img src="images/redhat-logo-cloud.jpeg" width="90%"/>
+    </div>
+</section>
 
-  </body>
+<section id="fabrice" style="text-align: center;">
+    <p>Fabrice Matrat</p>
+
+    <p style=" font-size: 30px;  ">alias Porthos</p>
+    <img width="20%" src="images/fabrice_matrat.png"/><br/>
+
+    <p style=" font-size: 30px;  ">@fabricematrat<br/>fabricematrat@gmail.com<br/>https://github.com/fabricematrat</p>
+
+    <div style="width: 100%">
+        <div style="float:left;text-align:right;display:inline-block;width: 30%">
+            <img src="images/3musket33rs.jpeg" width="50%"/>
+        </div>
+        <div style="float:left;text-align:right;display:inline-block;width: 10%">
+            &nbsp;
+        </div>
+        <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 30%">
+            <img src="images/rivierargug.png" width="50%"/>
+        </div>
+        <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 30%">
+            <img src="images/js-sophia-small.png" width="50%"/>
+        </div>
+    </div>
+
+</section>
+
+<section id="introduction-2" style="text-align: center;">
+    <p>3musket33rs</p>
+
+    <p style=" font-size: 30px;  ">What about Aramis and D'artagnan?</p>
+
+    <div style="position:absolute; width:50%; botom: 0; left: 0;">
+        <img style="width: 30%; display: block; margin: 0 auto" src="images/blanch.jpg"/>
+        <h4 style="font-size:20px;text-align:center"><b>Sebastien Blanc</b><br/><b>@sebi2706</b></h4>
+    </div>
+    <div style="position:absolute; width:50%; botom: 0; right: 0;">
+        <img style="width: 30%; display: block; margin: 0 auto" src="images/mathieu.jpeg"/>
+        <h4 style="font-size:20px;text-align:center"><b>Mathieu Bruyen<b><br/><b>@mathbruyen</b></h4>
+    </div>
+
+</section>
+
+<section id="mobile1" >
+    <h2>Which one...</h2>
+    <p style=" font-size: 40px;  ">is a mobile web app? </p>
+    <div style="float: left; display: inline-block; width: 25%">
+        <img src="images/iosFoursquare.png" width="95%"/>
+    </div>
+    <div style="float: left; display: inline-block; width: 25%">
+        <img src="images/android1.jpg" width="100%"/>
+    </div>
+    <div style="float: left; display: inline-block; width: 25%">
+        <img src="images/webFoursquare.png" width="110%"/>
+    </div>
+
+    <div style="float:right;font-size:30px;text-align:right;display:inline-block;width: 25%">
+        <img src="images/hybrid3cirles.png" width="110%"/>
+    </div>
+    <br/>
+
+    <!-- TODO animation for result -->
+
+</section>
+
+<section id="mobile2" >
+<h2>1. What is ...</h2>
+    <p style=" font-size: 40px;  text-align:center">a mobile web app?</p>
+</section>
+
+<section id="mobile3" class="step slide" data-x="2623" data-y="-477" data-scale="0.6">
+    <h2>Size matters...</h2>
+
+    <div style="float: left; display: inline-block; width: 30%">
+        <br/><br/><br/><img src="images/webFoursquare.png" width="60%"/>
+    </div>
+    <div style="float:right;font-size:30px;text-align:right;display:inline-block;width: 70%">
+        <img src="images/myFoursquare.png" width="80%"/>
+    </div>
+</section>
+
+<section id="mobile9" class="step slide" data-x="2623" data-y="483" data-scale="0.6">
+    <h2>Progressive enhancement</h2>
+    <!-- https://avventa.atlassian.net/wiki/display/SOL/Responsive+Web+Design+and+Progressive+Enhancement -->
+    <div style="font-size:30px;text-align:right;display:inline-block;">
+        <br/><img style="display:block;margin-left:auto;margin-right:auto" src="images/light_bulb.jpg" width="70%"/>
+    </div>
+</section>
+
+<section id="mobile4" class="step slide" data-x="3283" data-y="-477" data-scale="0.6">
+    <h2>Interactions</h2>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/awful-eyes.png" width="70%"/>
+</section>
+
+<section id="mobile5" class="step slide" data-x="3943" data-y="-477" data-scale="0.6">
+    <h2>Geolocation</h2>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/geolocation.jpeg" width="70%"/>
+</section>
+
+<section id="mobile6" class="step slide" data-x="3943" data-y="3" data-scale="0.6">
+    <h2>Surviving offline</h2>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/offline.png" width="70%"/>
+</section>
+
+<section id="mobile6b" class="step slide" data-x="3943" data-y="3" data-scale="0.6">
+    <h2>Push/paging???</h2>
+    <!--<img style="display:block;margin-left:auto;margin-right:auto" src="images/offline.png" width="70%"/>-->
+</section>
+
+<section id="mobile11" class="step slide" data-x="1963" data-y="3" data-scale="0.6">
+    <h2>Web store</h2>
+    <p style=" font-size: 40px; text-align: center ">Going native</p>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/avatar_hybrid.jpg" width="80%"/>
+
+    <div style="font-size:40px;text-align:center;">
+        ... as hybrid
+    </div>
+</section>
+
+<section id="mobile7" class="step slide" data-x="3943" data-y="483" data-scale="0.6">
+    <h2>2. How to ...</h2>
+    <p style=" font-size: 40px; text-align: center ">transform a web app in a mobile one?</p>
+    <!--<img style="display:block;margin-left:auto;margin-right:auto" src="images/transformer.png" width="70%"/>-->
+</section>
+
+<section id="mobile8" class="step slide" data-x="3283" data-y="483" data-scale="0.6">
+    <h2>Responsive Web Design</h2><br>
+
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 40%">
+        <b>What is it?</b><br/>
+        No more zooming, scrolling!<br/><br/>
+        <b>Which techniques?</b><br/>
+        . media queries<br/>
+        . fluid grid<br/>
+        . fexible images<br/>
+    </div>
+    <div style="float:right;font-size:30px;text-align:right;display:inline-block;width: 40%">
+        <br/><br/><img style="display:block;margin-left:auto;margin-right:auto" src="images/responsive.jpg"
+                       width="100%"/>
+    </div>
+</section>
+
+<section id="mobile10" class="step slide" data-x="1963" data-y="483" data-scale="0.6">
+    <h2>Which tools?</h2>
+    <p style=" font-size: 40px;  ">to deal with responsive design and progressive enhancement</p>
+    <div style="float: left; display: inline-block; width:40%">
+        <br/><br/><img src="images/jqm-logo.png" width="100%"/>
+        <br/><br/><img src="images/sencha.png" width="100%"/>
+    </div>
+    <div style="float:right;font-size:30px;text-align:right;display:inline-block;width: 40%">
+        <br/><br/><br/><img src="images/jQMobi.png" width="100%"/>
+        <br/><br/><img src="images/bootstrap.jpg" width="100%"/>
+    </div>
+</section>
+
+<section id="mobile10.1" class="step slide" data-x="1963" data-y="483" data-scale="0.6">
+    <h2>Geolocation?</h2>
+    <p style=" font-size: 40px;  "></p>
+</section>
+
+<section id="mobile10.2" class="step slide" data-x="1963" data-y="483" data-scale="0.6">
+    <h2>Offline mode</h2>
+
+    <ul class="steps">
+        <li>Make your point</li>
+        <li>Step by step</li>
+    </ul>
+    <!--<p style=" font-size: 40px;  ">make your client fat</p>-->
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/fat1.png" width="70%"/>  <br/>
+</section>
+
+<section id="mobile10.3" class="step slide" data-x="1963" data-y="483" data-scale="0.6">
+    <h2>Synchronise</h2>
+    <p style=" font-size: 40px;  ">when back online</p>
+</section>
+
+<section id="mobile10.4" class="step slide" data-x="1963" data-y="483" data-scale="0.6">
+    <h2>Push</h2>
+    <p style=" font-size: 40px;  ">when to refresh</p>
+    <p style=" font-size: 40px;  ">sockjs netty</p>
+</section>
+
+<section id="mobile12" class="step slide" data-x="2623" data-y="3" data-scale="0.6">
+    <h2>Hybrid</h2>
+    <p style=" font-size: 40px;  ">Cordova, phonegap from adobe</p>
+    <p style=" font-size: 40px;  ">Titanium, from appcelerator</p>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/gap.jpg" width="40%"/>
+</section>
+
+<section id="mobile12.1" class="step slide" data-x="3283" data-y="3" data-scale="0.6">
+    <h2>PhoneGap Build</h2>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="images/phonegap_build.png" width="100%"/>
+</section>
+
+<section id="mobile13.1" class="step slide" data-x="3943" data-y="483" data-scale="0.6">
+    <h2>3. What about 3musket33rs?</h2>
+    <!--<img style="display:block;margin-left:auto;margin-right:auto" src="images/transformer.png" width="70%"/>-->
+</section>
+
+<section id="grails1" class="step section" data-x="-1763" data-y="2427" data-scale="3">
+    <img width="100%" src="images/grails.png"/>
+</section>
+<section id="grails2" class="step slide" data-x="-2753" data-y="2277" data-scale="0.6">
+    <h2>Full-Stack Framework</h2>
+
+    <div style="float: left; font-size: 30px; text-align: left; display: inline-block; width: 40%">
+        <div style="text-align: left;"><br/><br/>
+            <b>. Presentation</b><br/>
+            <b>. Business logic</b><br/>
+            <b>. Persistence</b><br/>
+            <b>. Build & Test</b><br/>
+            <b>. Documentation</b><br/>
+        </div>
+    </div>
+    <div style="float:right;font-size:30px;text-align:right;display:inline-block;">
+        <br/><img src="images/mobile.png" width="400" height="500"/>
+    </div>
+</section>
+
+
+<section id="grails3" class="step slide" data-x="-2093" data-y="2277" data-scale="0.6">
+    <h2>An evolution</h2>
+    <img src="images/grails-evolution.bmp" width="100%"/>
+    <br/>
+
+    <div style="font-size: 25px;"><b>Leverages existing resources</b>
+    </div>
+    <div style="font-size: 15px;"><b>(works with "JVM friendly" hardware, software and humans)</b>
+    </div>
+    <div style="font-size: 25px;"><b>Build upon industry-proven technologies</b></div>
+    <div style="font-size: 15px;"><b>(established, well tested and scalable Java frameworks & libraries)</b></div>
+</section>
+
+<section id="grails4" class="step slide" data-x="-1433" data-y="2277" data-scale="0.6">
+    <h2>Convention over Configuration</h2>
+
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 40%">
+        <div style="text-align: left;"><br/>
+            <b>. No more painful XML settings</b><br/><br/>
+            <b>. 80 / 20 rule</b><br/></br>
+            <b>. Don't repeat yourself (DRY)</b><br/><br/>
+        </div>
+    </div>
+    <div style="float:right;font-size:30px;text-align:right;display:inline-block;">
+        <img src="images/coc.png" width="400" height="500"/>
+    </div>
+</section>
+
+<section id="grails5" class="step slide" data-x="-773" data-y="2277" data-scale="0.6">
+    <h2>Domain Driven Design</h2>
+
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 50%">
+        <div style="text-align: left;"><br/><br/><br/>
+            <b>. Focus on the domain, rather than technology</b><br/></br>
+            <b>. Rapid prototyping</b><br/><br/>
+            <b>. Adaptable architecture</b><br/><br/>
+        </div>
+    </div>
+    <div style="float:right;text-align:right;display:inline-block;width: 50%">
+        <br/><br/><img src="images/mini.jpg" width="100%"/>
+    </div>
+</section>
+
+<section id="grails6" class="step slide" data-x="-773" data-y="2751" data-scale="0.6">
+    <h2>Magic Scaffolding</h2>
+    <br/><img style="display:block;margin-left:auto;margin-right:auto" src="images/scaffold.jpg" width="70%"/>
+</section>
+
+<section id="grails7" class="step slide" data-x="-773" data-y="3231" data-scale="0.6">
+    <h2>Grails Plugin System</h2>
+
+    <div style="text-align: left;">
+        <b>. 1000+ plugins</b></br>
+        <b>. Modularized app architecture</b><br/>
+        <b>. Reuse established Java libraries</b><br/>
+    </div>
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 33%">
+        <img src="images/lego1.png" width="100%"/>
+    </div>
+    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 33%">
+        <img src="images/lego2.png" width="100%"/>
+    </div>
+    <div style="float:right;text-align:right;display:inline-block;width: 33%">
+        <img src="images/lego3.png" width="100%"/>
+    </div>
+</section>
+
+<section id="grails8" class="step slide" data-x="-1433" data-y="3231" data-scale="0.6">
+    <h2>Grails Mobile Plugin</h2>
+
+    <div style="float: left; font-size: 25px; text-align: right; display: inline-block; width: 50%"><br/>
+
+        <p><b>jQuery Mobile scaffolding</b></p>
+        <span style="font-size: 20px;">by R. Fletcher & S. Blanc</span></br>
+        <b>Geolocation</b><br/>
+        <span style="font-size: 20px;">by S. Blanc</span></br>
+        <b>Spring mobile</b><br/>
+        <span style="font-size: 20px;">by S. Blanc</span></br>
+        <b>HTML5 mobile scaffolding</b><br/>
+        <span style="font-size: 20px;">by 3musket33rs</span></br>
+        <b>PhoneGap build</b><br/>
+        <span style="font-size: 20px;">by 3musket33rs</span></br>
+        <br/>
+        <a href="3musket33rs.github.com">3musket33rs.github.com</a>
+    </div>
+    <div style="width:50%;float:right;font-size:30px;text-align:right;display:inline-block;">
+        <br/>
+        <iframe src="3musket33rs.html" width="400" height="500" name="myFrame" id="myFrame"></iframe>
+    </div>
+
+
+</section>
+
+<section id="grails9" class="step slide" data-x="-2093" data-y="3231" data-scale="0.6">
+    <h2>Groovy</h2>
+
+    <div style="float: left; font-size: 30px; text-align: left; display: inline-block; width: 50%"><br/>
+
+        <p><b>Dynamic language</b></p>
+        <span style="font-size: 18px;">running on the <b>JVM</b></span></br>
+        <b>Modern features</b><br/>
+        <span style="font-size: 20px;">closure, collection...</span></br>
+        <p><b>Statically type check</b></p>
+        <span style="font-size: 20px;">and statically compiled ideal for Java scripting</span></br>
+        <b>Almost-zero learning curve</b><br/>
+        <b>Domain-Specific Language</b><br/>
+        <span style="font-size: 20px;">Perfect companion for embedded DSL</span></br>
+        <span style="font-size: 20px;"><b>Spock</b> awsome testing framework</span></br>
+        <span style="font-size: 20px;"><b>Gradle</b> official <b>Android build system</b></span></br>
+        <b>Simplify mocking testing</b><br/>
+        <br/>
+    </div>
+    <div style="float:right;text-align:right;display:inline-block;width: 50%">
+        <br/><br/><img src="images/groovy.png" width="100%"/>
+    </div>
+</section>
+
+
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/keymaster/keymaster.min.js"></script>
+<script src="components/hammerjs/dist/hammer.min.js"></script>
+<script src="components/highlightjs/highlight.pack.js"></script>
+<script src="js/ruban.min.js"></script>
+<script>
+
+    $('#intro').on({
+        active:typewriter,
+        inactive:null
+    });
+
+    $('#events').on({
+        active:function () {
+            $(this).find('h1').stop().animate({marginLeft:'2em'}, 2000);
+        },
+        inactive:function () {
+            $(this).find('h1').stop().animate({marginLeft:0});
+        }
+    });
+
+
+    var ruban = new Ruban({
+        pagination:true
+    });
+
+    //-------------------------------------------------------------------------------------------------
+    //  Typewriter: definition
+    //-------------------------------------------------------------------------------------------------
+    function typewriter() {
+        var srcText = $("#src").html();
+        var i = 0;
+        var result = srcText[i];
+        setInterval(function () {
+                    if (i == srcText.length) {
+                        clearInterval(this);
+                        return;
+                    }
+                    ;
+                    i++;
+                    if (srcText[i])
+                        result += srcText[i].replace("\n", "<br />");
+                    $("#target").html(result);
+                },
+                100); // the period between every character and next one, in milliseonds.
+    }
+    ;
+
+
+</script>
+</body>
+
 </html>
